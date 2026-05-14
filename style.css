@@ -1,0 +1,109 @@
+:root {
+    --bg-dark: #0f1214;
+    --card-dark: #1a1e23;
+    --accent-green: #00e676;
+    --text-main: #ffffff;
+    --text-dim: #90a4ae;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+}
+
+.main-header {
+    background-color: var(--card-dark);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.logo { color: var(--accent-green); font-weight: bold; letter-spacing: 1px; }
+
+.tasa-card {
+    background: var(--card-dark);
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #333;
+}
+
+#tasaBCV {
+    background: transparent;
+    border: none;
+    color: var(--accent-green);
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 80px;
+    text-align: right;
+}
+
+.balance-display {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#displayBS { font-size: 2.5rem; color: var(--text-main); margin: 5px 0; }
+#displayUSD { color: var(--accent-green); font-weight: 400; margin: 0; }
+
+.input-panel {
+    background: var(--card-dark);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.input-panel input, .input-panel select {
+    background: #262c33;
+    border: 1px solid #3d444d;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.row { display: flex; gap: 10px; }
+#montoInput { flex: 2; }
+#monedaInput { flex: 1; }
+#concepto { width: 93%; }
+
+.btn-add {
+    width: 100%;
+    padding: 15px;
+    background: var(--accent-green);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.history-section { margin-top: 30px; }
+
+.history-item {
+    background: var(--card-dark);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-left: 4px solid var(--accent-green);
+}
+
+.history-item small { color: var(--text-dim); display: block; }
+
+.btn-clear {
+    background: transparent;
+    color: #ff5252;
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}

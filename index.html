@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00e676">
+    <link rel="manifest" href="manifest.json">
+    <title>Al Cambio Finanzas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo"><i class="fas fa-chart-line"></i> <span>AL CAMBIO</span></div>
+        <div id="date-now"></div>
+    </header>
+
+    <main class="container">
+        <section class="tasa-card">
+            <span>TASA BCV</span>
+            <div class="tasa-input-wrapper">
+                <p>Bs.</p>
+                <input type="number" id="tasaBCV" value="45.50" step="0.01">
+            </div>
+        </section>
+
+        <div class="balance-display">
+            <div class="balance-item">
+                <small>Equivalente en Bolívares</small>
+                <h1 id="displayBS">0,00 Bs.</h1>
+            </div>
+            <div class="balance-item">
+                <small>Monto en Dólares</small>
+                <h2 id="displayUSD">$ 0,00</h2>
+            </div>
+        </div>
+
+        <div class="input-panel">
+            <input type="text" id="concepto" placeholder="Concepto (ej. Pago Movil)">
+            <div class="row">
+                <input type="number" id="montoInput" placeholder="Monto">
+                <select id="monedaInput">
+                    <option value="USD">$ USD</option>
+                    <option value="BS">Bs. BS</option>
+                </select>
+            </div>
+            <button onclick="registrarMovimiento()" class="btn-add">
+                <i class="fas fa-plus"></i> Registrar Movimiento
+            </button>
+        </div>
+
+        <section class="history-section">
+            <h3><i class="fas fa-history"></i> Historial</h3>
+            <div id="listaHistorial"></div>
+            <button onclick="limpiarHistorial()" class="btn-clear">Limpiar Todo</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Registrar el Service Worker para que sea instalable
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "Al Cambio Finanzas",
+  "short_name": "AlCambio",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f1214",
+  "theme_color": "#00e676",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/10543/10543261.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
